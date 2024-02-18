@@ -98,7 +98,7 @@ public class login {
                 }*/
 
                 MysqlConnection connection = new MysqlConnection();
-                connection.mysqlConnection("jdbc:mysql://uf9qeal5bgceu5cm:uOAUrGrGQQQ1DPI7slda@bd2fzabgdewpm0hjzktx-mysql.services.clever-cloud.com:3306/bd2fzabgdewpm0hjzktx/bd2fzabgdewpm0hjzktx", "uf9qeal5bgceu5cm", "uOAUrGrGQQQ1DPI7slda");
+                connection.mysqlConnection("jdbc:mysql://utrknxklzvib6amk:KkyQew23qotJ6GAkmksf@bqjaf6disbf0cayzptja-mysql.services.clever-cloud.com:3306/bqjaf6disbf0cayzptja", "utrknxklzvib6amk", "KkyQew23qotJ6GAkmksf");
             }
         });
     }
