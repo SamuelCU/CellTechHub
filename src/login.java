@@ -31,7 +31,7 @@ public class login {
         ingressarboton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String selectedOption = (String) comboBoxlogin.getSelectedItem();
+                /*String selectedOption = (String) comboBoxlogin.getSelectedItem();
                 String admi ="Daniel";
                 String cajero="Kevin";
                 String contraa="1234";
@@ -95,8 +95,10 @@ public class login {
                         usertext.setText("");
                         passwordtext.setText("");
                     }
-                }
+                }*/
 
+                MysqlConnection connection = new MysqlConnection();
+                connection.mysqlConnection("jdbc:mysql://uf9qeal5bgceu5cm:uOAUrGrGQQQ1DPI7slda@bd2fzabgdewpm0hjzktx-mysql.services.clever-cloud.com:3306/bd2fzabgdewpm0hjzktx/bd2fzabgdewpm0hjzktx", "uf9qeal5bgceu5cm", "uOAUrGrGQQQ1DPI7slda");
             }
         });
     }
