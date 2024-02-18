@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.*;
 import java.util.Objects;
 
 public class login {
@@ -97,8 +98,41 @@ public class login {
                     }
                 }*/
 
-                MysqlConnection connection = new MysqlConnection();
-                connection.mysqlConnection("jdbc:mysql://utrknxklzvib6amk:KkyQew23qotJ6GAkmksf@bqjaf6disbf0cayzptja-mysql.services.clever-cloud.com:3306/bqjaf6disbf0cayzptja", "utrknxklzvib6amk", "KkyQew23qotJ6GAkmksf");
+                //MysqlConnection connection = new MysqlConnection();
+                //connection.mysqlConnection("jdbc:mysql://utrknxklzvib6amk:KkyQew23qotJ6GAkmksf@bqjaf6disbf0cayzptja-mysql.services.clever-cloud.com:3306/bqjaf6disbf0cayzptja", "utrknxklzvib6amk", "KkyQew23qotJ6GAkmksf");
+
+                String user = usertext.getText();
+                String query = "SELECT contrasenia FROM empleados WHERE nombre = ?";
+
+                try(Connection connection = DriverManager.getConnection("jdbc:mysql://utrknxklzvib6amk:KkyQew23qotJ6GAkmksf@bqjaf6disbf0cayzptja-mysql.services.clever-cloud.com:3306/bqjaf6disbf0cayzptja", "utrknxklzvib6amk", "KkyQew23qotJ6GAkmksf")){
+                    try(PreparedStatement preparedStatement = connection.prepareStatement(query)){
+                        preparedStatement.setString(1,user);
+                        try(ResultSet resultSet = preparedStatement.executeQuery()){
+                            if(resultSet.next()){
+                                String passwordUser = resultSet.getString("contrasenia");
+                                char[] enteredPassword = passwordtext.getPassword();
+                                String enteredPasswordString = new String(enteredPassword);
+                                if(passwordUser.equals(enteredPasswordString)){
+
+                                    System.out.println("Ingreso al sistema");
+
+                                }else{
+                                    System.out.println("COntraseña incorrecta");
+                                    usertext.setText("");
+                                    passwordtext.setText("");
+                                }
+                            }else{
+                                System.out.println("Usuario no encontrado");
+                                usertext.setText("");
+                                passwordtext.setText("");
+
+                            }
+                        }
+                    }
+
+                }catch(SQLException ex){
+                    ex.printStackTrace();
+                }
             }
         });
     }
