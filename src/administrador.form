@@ -5,7 +5,9 @@
     <constraints>
       <xy x="20" y="20" width="500" height="400"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-1644806"/>
+    </properties>
     <border type="bevel-raised"/>
     <children>
       <component id="12834" class="javax.swing.JToolBar$Separator">
@@ -52,17 +54,20 @@
           <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-5192482"/>
           <text value="Next"/>
         </properties>
       </component>
-      <toolbar id="b9be0">
+      <toolbar id="b9be0" binding="barramenu">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="-1" height="20"/>
           </grid>
         </constraints>
-        <properties/>
-        <border type="none"/>
+        <properties>
+          <background color="-5192482"/>
+        </properties>
+        <border type="bevel-raised"/>
         <children>
           <component id="b042e" class="javax.swing.JRadioButton" binding="cajeroRadioButton" default-binding="true">
             <constraints/>
@@ -70,6 +75,10 @@
               <icon value="logocajero.png"/>
               <text value="Cajero"/>
             </properties>
+          </component>
+          <component id="33ca8" class="javax.swing.JToolBar$Separator">
+            <constraints/>
+            <properties/>
           </component>
           <component id="10d2a" class="javax.swing.JToolBar$Separator">
             <constraints/>
@@ -81,6 +90,10 @@
               <icon value="logohistorial.png"/>
               <text value="Historial"/>
             </properties>
+          </component>
+          <component id="d3f09" class="javax.swing.JToolBar$Separator">
+            <constraints/>
+            <properties/>
           </component>
           <component id="8a78e" class="javax.swing.JToolBar$Separator">
             <constraints/>

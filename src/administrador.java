@@ -10,6 +10,7 @@ public class administrador {
     private JRadioButton cajeroRadioButton;
     private JRadioButton historialRadioButton;
     private JRadioButton productosRadioButton;
+    private JToolBar barramenu;
 
     public administrador() {
         nextButton.addActionListener(new ActionListener() {
