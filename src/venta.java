@@ -6,9 +6,9 @@ public class venta {
     private JTextField categoriaF;
     private JTable contenido;
     private JButton nextButton;
-    private JTextField pagoF;
     private JLabel img;
     private JLabel codigo;
     private JLabel pago;
     private JLabel categoria;
+    private JLabel pagoF;
 }

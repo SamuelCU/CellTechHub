@@ -98,8 +98,7 @@ public class login {
                     }
                 }*/
 
-                //MysqlConnection connection = new MysqlConnection();
-                //connection.mysqlConnection("jdbc:mysql://utrknxklzvib6amk:KkyQew23qotJ6GAkmksf@bqjaf6disbf0cayzptja-mysql.services.clever-cloud.com:3306/bqjaf6disbf0cayzptja", "utrknxklzvib6amk", "KkyQew23qotJ6GAkmksf");
+
 
                 String user = usertext.getText();
                 String query = "SELECT contrasenia FROM empleados WHERE nombre = ?";
@@ -115,6 +114,15 @@ public class login {
                                 if(passwordUser.equals(enteredPasswordString)){
 
                                     System.out.println("Ingreso al sistema");
+                                    JFrame loginFrame = (JFrame) SwingUtilities.getWindowAncestor(ingressarboton);
+                                    loginFrame.dispose();
+                                    JFrame frame2 = new JFrame("Cajero");
+                                    frame2.setContentPane(new venta().ventapanel);
+                                    frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                                    frame2.setSize(450,300);
+                                    frame2.setLocationRelativeTo(null);
+                                    //frame2.setUndecorated(true);
+                                    frame2.setVisible(true);
 
                                 }else{
                                     System.out.println("COntraseña incorrecta");

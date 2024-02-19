@@ -7,4 +7,5 @@ public class registro {
     private JTextField telefonoF;
     private JTextField direccionF;
     private JButton registarButton;
+    private JTextField emailF;
 }
