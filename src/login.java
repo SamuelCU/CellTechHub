@@ -117,7 +117,7 @@ public class login {
                                     JFrame loginFrame = (JFrame) SwingUtilities.getWindowAncestor(ingressarboton);
                                     loginFrame.dispose();
                                     JFrame frame2 = new JFrame("Cajero");
-                                    frame2.setContentPane(new venta().ventapanel);
+                                    frame2.setContentPane(new administrador().administrador);
                                     frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                                     frame2.setSize(450,300);
                                     frame2.setLocationRelativeTo(null);
