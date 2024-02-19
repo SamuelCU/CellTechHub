@@ -1,7 +1,7 @@
 import javax.swing.*;
 
 public class venta {
-    private JPanel venta;
+    public JPanel ventapanel;
     private JTextField codigoF;
     private JTextField categoriaF;
     private JTable contenido;

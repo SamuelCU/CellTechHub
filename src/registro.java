@@ -1,7 +1,7 @@
 import javax.swing.*;
 
 public class registro {
-    private JPanel registro;
+    public JPanel registropanel;
     private JTextField cedulaF;
     private JTextField nombreF;
     private JTextField telefonoF;
