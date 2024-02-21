@@ -1,9 +1,10 @@
 import javax.swing.*;
 
 public class cliente {
-    private JPanel panel1;
+    protected JPanel clientepanel;
     private JTextField clienteF;
     private JTable clienteT;
     private JButton nextButton;
     private JButton registrarButton;
+    private JRadioButton salirRadioButton;
 }

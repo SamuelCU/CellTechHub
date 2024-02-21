@@ -8,4 +8,5 @@ public class registro {
     private JTextField direccionF;
     private JButton registarButton;
     private JTextField emailF;
+    private JRadioButton salirRadioButton;
 }

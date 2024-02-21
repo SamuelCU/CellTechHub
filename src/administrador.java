@@ -11,6 +11,7 @@ public class administrador {
     private JRadioButton historialRadioButton;
     private JRadioButton productosRadioButton;
     private JToolBar barramenu;
+    private JRadioButton salirRadioButton;
 
     public administrador() {
         nextButton.addActionListener(new ActionListener() {

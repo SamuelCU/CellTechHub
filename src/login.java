@@ -119,7 +119,7 @@ public class login {
                                     JFrame frame2 = new JFrame("Cajero");
                                     frame2.setContentPane(new administrador().administrador);
                                     frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                                    frame2.setSize(450,300);
+                                    frame2.setSize(550,300);
                                     frame2.setLocationRelativeTo(null);
                                     //frame2.setUndecorated(true);
                                     frame2.setVisible(true);
