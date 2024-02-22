@@ -125,15 +125,24 @@ public class login {
                                     frame2.setVisible(true);
 
                                 }else{
-                                    System.out.println("COntraseña incorrecta");
+                                    System.out.println("Contraseña incorrecta");
+                                    JOptionPane optionPane = new JOptionPane("Contraseña incorrecta", JOptionPane.ERROR_MESSAGE);
+                                    // Mostrar el cuadro de diálogo
+                                    JDialog dialog = optionPane.createDialog("Error");
+                                    dialog.setResizable(false);
+                                    dialog.setVisible(true);
                                     usertext.setText("");
                                     passwordtext.setText("");
                                 }
                             }else{
                                 System.out.println("Usuario no encontrado");
+                                JOptionPane optionPane = new JOptionPane("Usuario no encontrado", JOptionPane.ERROR_MESSAGE);
+                                // Mostrar el cuadro de diálogo
+                                JDialog dialog = optionPane.createDialog("Error");
+                                dialog.setResizable(false);
+                                dialog.setVisible(true);
                                 usertext.setText("");
                                 passwordtext.setText("");
-
                             }
                         }
                     }

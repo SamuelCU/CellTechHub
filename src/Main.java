@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Login");
         Color color1=new Color(230, 230, 250);
-        frame.setContentPane(new administrador().administrador);
+        frame.setContentPane(new login().loginpanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(550,300);
         frame.setLocationRelativeTo(null);

@@ -23,6 +23,7 @@ public class administrador {
         nextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Eliminar funcionalidad este boton permitira agregar un nuevo cajero abriendo un nuevo form
                 // Obtener la cédula ingresada
                 String cedula = cedula1F.getText();
                 String query = "SELECT id_empleado FROM empleados WHERE id_empleado = ?";
@@ -47,6 +48,7 @@ public class administrador {
         cajeroRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Buscara el Cajero correspondiente al ingreso de su cedula
 
                 // Obtener la cédula ingresada
                 String cedula = cedula1F.getText();
@@ -107,6 +109,7 @@ public class administrador {
         historialRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Mostrare todos los Cajeros con detalles de venta y el total de venta.
                 String sql = "SELECT * FROM empleados";
                 // Crear una sentencia
                 Connection conexion = null;
