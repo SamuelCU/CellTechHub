@@ -25,7 +25,37 @@ public class administrador {
         agregarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Eliminar funcionalidad este boton permitira agregar un nuevo cajero abriendo un nuevo form
+                //Esta funcion le permitira agregar un nuevo cajero o producto al administrador
+
+                String selectedOption1 = (String) cajeroRadioButton.getText();
+                String selectedOption2 = (String) historialRadioButton.getText();
+                String selectedOption3 = (String) productosRadioButton.getText();
+                String agregarselect = (String) agregarButton.getText();
+
+                if ((Objects.equals(selectedOption1,"Cajero")&Objects.equals(agregarselect,"Agregar Cajero"))
+                || (Objects.equals(selectedOption2,"Historial")&Objects.equals(agregarselect,"Agregar Cajero"))
+                ){
+                    JFrame loginFrame = (JFrame) SwingUtilities.getWindowAncestor(agregarButton);
+                    loginFrame.dispose();
+                    JFrame frame2 = new JFrame("Nuevo Cajero");
+                    frame2.setContentPane(new nuevocajero().nuevocajeropanel);
+                    frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frame2.setSize(550, 600);
+                    frame2.setLocationRelativeTo(null);
+                    //frame2.setUndecorated(true);
+                    frame2.setVisible(true);
+                }else{
+                    JFrame loginFrame = (JFrame) SwingUtilities.getWindowAncestor(agregarButton);
+                    loginFrame.dispose();
+                    JFrame frame2 = new JFrame("Producto");
+                    frame2.setContentPane(new nuevoproducto().nuevoproductopanel);
+                    frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    frame2.setSize(550, 600);
+                    frame2.setLocationRelativeTo(null);
+                    //frame2.setUndecorated(true);
+                    frame2.setVisible(true);
+                }
+
 
             }
         });

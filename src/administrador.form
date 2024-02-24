@@ -56,7 +56,7 @@
         </constraints>
         <properties>
           <background color="-5192482"/>
-          <text value=" Agregar Cajero"/>
+          <text value="Agregar Cajero"/>
         </properties>
       </component>
       <toolbar id="b9be0" binding="barramenu">
