@@ -8,21 +8,13 @@ import java.util.Objects;
 
 public class administrador {
     protected JPanel administrador;
-    private JTextField cedula1F;
-    private JTable cajeroT;
-    private JButton agregarButton;
-    private JRadioButton cajeroRadioButton;
-    private JRadioButton historialRadioButton;
-    private JRadioButton productosRadioButton;
-    private JToolBar barramenu;
-    private JRadioButton salirRadioButton;
-    private JButton buscarButton;
-    private JLabel admintrativotext;
+    private JRadioButton radioButton1;
+    private JLabel usertext;
 
     private DefaultTableModel tableModel;
 
     public administrador() {
-        agregarButton.addActionListener(new ActionListener() {
+        /*agregarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Esta funcion le permitira agregar un nuevo cajero o producto al administrador
@@ -73,7 +65,7 @@ public class administrador {
                 //frame2.setUndecorated(true);
                 frame2.setVisible(true);*/
                 // Obtener la opción seleccionada
-                String selectedOption = (String) cajeroRadioButton.getText();
+               /* String selectedOption = (String) cajeroRadioButton.getText();
 
                 // Abrir la ventana correspondiente
                 if (selectedOption.equals("Cajero")) {
@@ -223,6 +215,7 @@ public class administrador {
                     cedula1F.setText("");
                 }
             }
-        });
+        });*/
     }
 }
+
