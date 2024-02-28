@@ -2,13 +2,13 @@ import javax.swing.*;
 
 public class venta {
     public JPanel ventapanel;
-    private JTextField codigoF;
-    private JTextField categoriaF;
-    private JTable contenido;
-    private JButton nextButton;
-    private JLabel img;
-    private JLabel codigo;
-    private JLabel pago;
-    private JLabel categoria;
-    private JLabel pagoF;
+    private JRadioButton radioButton1;
+    private JLabel usertext;
+    private JRadioButton radioButton2;
+    private JTextField textField1;
+    private JTextField textField2;
+    private JButton button1;
+    private JButton button2;
+    private JTable table1;
+    private JButton button3;
 }

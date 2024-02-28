@@ -1,27 +1,18 @@
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.util.Objects;
 
 public class nuevocajero {
-    private JButton ingresarButton;
-    private JButton regresarButton;
-    private JButton salirButton;
-    private JTextField nombretext;
-    private JTextField cnombretext;
-    private JTextField contraseniatext;
-    private JTextField ccontrasenoatext;
     public JPanel nuevocajeropanel;
-    private JTextField cedulatext;
-    private JTextField ccedulatext;
+    private JRadioButton radioButton1;
+    private JLabel usertext;
+    private JRadioButton radioButton2;
+    private JTextField textField1;
+    private JTextField textField3;
+    private JPasswordField passwordField1;
+    private JPasswordField passwordField2;
+    private JButton AGREGARButton;
 
     public nuevocajero() {
-        regresarButton.addActionListener(new ActionListener() {
+        /*regresarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame frame2 = new JFrame("Administrador");
@@ -82,6 +73,6 @@ public class nuevocajero {
                     frame.dispose();
                 }
             }
-        });
+        });*/
     }
 }
