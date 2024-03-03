@@ -20,7 +20,7 @@
         </properties>
         <border type="none"/>
         <children>
-          <component id="c72d4" class="javax.swing.JRadioButton" binding="radioButton2" default-binding="true">
+          <component id="c72d4" class="javax.swing.JRadioButton" binding="returnButton">
             <constraints>
               <grid row="1" column="3" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -88,7 +88,7 @@
                   <text value=""/>
                 </properties>
               </component>
-              <component id="af700" class="javax.swing.JRadioButton" binding="radioButton1" default-binding="true">
+              <component id="af700" class="javax.swing.JRadioButton" binding="outButton">
                 <constraints>
                   <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -204,13 +204,13 @@
             </constraints>
             <properties/>
           </component>
-          <component id="1a80f" class="javax.swing.JButton" binding="button3" default-binding="true">
+          <component id="1a80f" class="javax.swing.JButton" binding="AGREGARButton" default-binding="true">
             <constraints>
               <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-16198478"/>
-              <text value="Button"/>
+              <text value="AGREGAR"/>
             </properties>
           </component>
           <component id="2d7fa" class="javax.swing.JLabel">

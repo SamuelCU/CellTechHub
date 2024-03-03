@@ -1,15 +1,15 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.*;
-import java.util.Objects;
 
 public class administrador {
     protected JPanel administrador;
-    private JRadioButton radioButton1;
+    private JRadioButton outButton;
     private JLabel usertext;
+    private JButton cajerobutton1;
+    private JButton estadisticabutton1;
+    private JButton productobutton1;
 
     private DefaultTableModel tableModel;
 
@@ -216,6 +216,62 @@ public class administrador {
                 }
             }
         });*/
+        cajerobutton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Ingreso a cajero");
+                JFrame loginFrame = (JFrame) SwingUtilities.getWindowAncestor(cajerobutton1);
+                loginFrame.dispose();
+                JFrame frame2 = new JFrame("Cajero");
+                frame2.setContentPane(new cajeropantalla().acajeropanel);
+                frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame2.setSize(850,550);
+                frame2.setLocationRelativeTo(null);
+                frame2.setVisible(true);
+            }
+        });
+        estadisticabutton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Ingreso a estadistica");
+                JFrame loginFrame = (JFrame) SwingUtilities.getWindowAncestor(estadisticabutton1);
+                loginFrame.dispose();
+                JFrame frame2 = new JFrame("Estadisticas");
+                frame2.setContentPane(new estadistica().estadisticapanel);
+                frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame2.setSize(850,550);
+                frame2.setLocationRelativeTo(null);
+                frame2.setVisible(true);
+            }
+        });
+        productobutton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Ingreso a Productos");
+                JFrame loginFrame = (JFrame) SwingUtilities.getWindowAncestor(productobutton1);
+                loginFrame.dispose();
+                JFrame frame2 = new JFrame("Productos");
+                frame2.setContentPane(new productos().productospanel);
+                frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame2.setSize(850,550);
+                frame2.setLocationRelativeTo(null);
+                frame2.setVisible(true);
+            }
+        });
+        outButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Salir al sistema");
+                JFrame loginFrame = (JFrame) SwingUtilities.getWindowAncestor(outButton);
+                loginFrame.dispose();
+                JFrame frame2 = new JFrame("Salir");
+                frame2.setContentPane(new login().loginpanel);
+                frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame2.setSize(850,550);
+                frame2.setLocationRelativeTo(null);
+                frame2.setVisible(true);
+            }
+        });
     }
 }
 

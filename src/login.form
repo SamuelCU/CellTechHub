@@ -64,7 +64,7 @@
               </grid>
             </constraints>
             <properties>
-              <foreground color="-1"/>
+              <foreground color="-14277082"/>
             </properties>
           </component>
           <component id="1adef" class="javax.swing.JLabel" binding="Userl">
@@ -84,7 +84,7 @@
               </grid>
             </constraints>
             <properties>
-              <foreground color="-1"/>
+              <foreground color="-14277082"/>
             </properties>
           </component>
           <component id="355d6" class="javax.swing.JLabel" binding="contrasenal">

@@ -3,7 +3,7 @@
   <grid id="27dc6" binding="cajeropanel" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="523" height="400"/>
     </constraints>
     <properties>
       <background color="-14277082"/>
@@ -37,7 +37,7 @@
               <text value=""/>
             </properties>
           </component>
-          <component id="be801" class="javax.swing.JRadioButton" binding="radioButton1" default-binding="true">
+          <component id="be801" class="javax.swing.JRadioButton" binding="outButton">
             <constraints>
               <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -76,15 +76,6 @@
               <color color="-1"/>
             </border>
             <children>
-              <component id="9bbcc" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <icon value="clientes.png"/>
-                  <text value=""/>
-                </properties>
-              </component>
               <component id="eaa87" class="javax.swing.JLabel">
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
@@ -92,6 +83,16 @@
                 <properties>
                   <foreground color="-1"/>
                   <text value="CLIENTES"/>
+                </properties>
+              </component>
+              <component id="46c84" class="javax.swing.JButton" binding="clientebutton1">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14277082"/>
+                  <icon value="clientes.png"/>
+                  <text value=""/>
                 </properties>
               </component>
             </children>
@@ -108,15 +109,6 @@
               <color color="-1"/>
             </border>
             <children>
-              <component id="3f89" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <icon value="ventas.png"/>
-                  <text value=""/>
-                </properties>
-              </component>
               <component id="86510" class="javax.swing.JLabel">
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
@@ -124,6 +116,16 @@
                 <properties>
                   <foreground color="-1"/>
                   <text value="VENTAS"/>
+                </properties>
+              </component>
+              <component id="9b7bb" class="javax.swing.JButton" binding="ventasbutton1">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14277082"/>
+                  <icon value="ventas.png"/>
+                  <text value=""/>
                 </properties>
               </component>
             </children>
