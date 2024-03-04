@@ -116,15 +116,26 @@ public class login {
                                 char[] enteredPassword = passwordtext.getPassword();
                                 String enteredPasswordString = new String(enteredPassword);
                                 if(passwordUser.equals(enteredPasswordString) & tipo.equals(selectedOption)){
-                                    System.out.println("Ingreso al sistema");
-                                    JFrame loginFrame = (JFrame) SwingUtilities.getWindowAncestor(ingressarboton);
-                                    loginFrame.dispose();
-                                    JFrame frame2 = new JFrame("Administrador");
-                                    frame2.setContentPane(new administrador().administrador);
-                                    frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                                    frame2.setSize(850,550);
-                                    frame2.setLocationRelativeTo(null);
-                                    frame2.setVisible(true);
+                                    if (tipo.equals("Administrador")) {
+                                        System.out.println("Ingreso al sistema");
+                                        JFrame loginFrame = (JFrame) SwingUtilities.getWindowAncestor(ingressarboton);
+                                        loginFrame.dispose();
+                                        JFrame frame2 = new JFrame("Administrador");
+                                        frame2.setContentPane(new administrador().administrador);
+                                        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                                        frame2.setSize(850, 550);
+                                        frame2.setLocationRelativeTo(null);
+                                        frame2.setVisible(true);
+                                    }else {
+                                        JFrame loginFrame = (JFrame) SwingUtilities.getWindowAncestor(ingressarboton);
+                                        loginFrame.dispose();
+                                        JFrame frame2 = new JFrame("Cajero");
+                                        frame2.setContentPane(new cajero().cajeropanel);
+                                        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                                        frame2.setSize(850, 550);
+                                        frame2.setLocationRelativeTo(null);
+                                        frame2.setVisible(true);
+                                    }
                                 }else{
                                     System.out.println(tipo);
                                     System.out.println(passwordUser);
