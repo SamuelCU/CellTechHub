@@ -13,7 +13,7 @@ public class productos {
     private JTable table1;
     private JButton AGREGARButton;
     public JPanel productospanel;
-    private JButton AGREGARIMGButton;
+    private JLabel imgLabel;
 
     public productos() {
         outButton.addActionListener(new ActionListener() {
