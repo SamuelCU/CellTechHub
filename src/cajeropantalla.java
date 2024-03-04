@@ -104,6 +104,7 @@ public class cajeropantalla {
                                     }
                                 }
                             }else {
+                                cedula1F.setText(" ");
                                 JOptionPane optionPane = new JOptionPane("Cajero no encontrado", JOptionPane.ERROR_MESSAGE);
                                 // Mostrar el cuadro de diálogo
                                 JDialog dialog = optionPane.createDialog("Error");
@@ -113,7 +114,6 @@ public class cajeropantalla {
                                 tableModel.setRowCount(0); // Establecer el número de filas a cero
                                 // Opcionalmente, también puedes limpiar las columnas
                                 tableModel.setColumnCount(0); // Establecer el número de columnas a cero
-                                cedula1F.setText("");
                             }
                         }
                     }
