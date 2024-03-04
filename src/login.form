@@ -44,7 +44,7 @@
               <font name="JetBrains Mono" size="14" style="0"/>
               <model>
                 <item value="Cajero"/>
-                <item value="Administrativo"/>
+                <item value="Administrador"/>
               </model>
             </properties>
           </component>

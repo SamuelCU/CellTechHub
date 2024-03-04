@@ -25,7 +25,7 @@ public class login {
                 // Abrir la ventana correspondiente
                 if (selectedOption.equals("Cajero")) {
                     Userl.setText("Cajero: ");
-                } else if (selectedOption.equals("Administrativo")) {
+                } else if (selectedOption.equals("Administrador")) {
                     Userl.setText("Admistrador: ");
                 }
             }
@@ -102,7 +102,8 @@ public class login {
 
 
                 String user = usertext.getText();
-                String query = "SELECT contrasenia FROM empleados WHERE nombre = ?";
+                String query = "SELECT contrasenia,tipo FROM empleados WHERE nombre = ?";
+                String selectedOption = (String) comboBoxlogin.getSelectedItem();
 
                 try(Connection connection = DriverManager.getConnection("jdbc:mysql://utrknxklzvib6amk:KkyQew23qotJ6GAkmksf@bqjaf6disbf0cayzptja-mysql.services.clever-cloud.com:3306/bqjaf6disbf0cayzptja", "utrknxklzvib6amk", "KkyQew23qotJ6GAkmksf")){
                     try(PreparedStatement preparedStatement = connection.prepareStatement(query)){
@@ -110,10 +111,11 @@ public class login {
                         try(ResultSet resultSet = preparedStatement.executeQuery()){
                             if(resultSet.next()){
                                 String passwordUser = resultSet.getString("contrasenia");
+                                String tipo = resultSet.getString("tipo");
+                                System.out.println(tipo);
                                 char[] enteredPassword = passwordtext.getPassword();
                                 String enteredPasswordString = new String(enteredPassword);
-                                if(passwordUser.equals(enteredPasswordString)){
-
+                                if(passwordUser.equals(enteredPasswordString) & tipo.equals(selectedOption)){
                                     System.out.println("Ingreso al sistema");
                                     JFrame loginFrame = (JFrame) SwingUtilities.getWindowAncestor(ingressarboton);
                                     loginFrame.dispose();
@@ -123,14 +125,32 @@ public class login {
                                     frame2.setSize(850,550);
                                     frame2.setLocationRelativeTo(null);
                                     frame2.setVisible(true);
-
                                 }else{
-                                    System.out.println("Contraseña incorrecta");
-                                    JOptionPane optionPane = new JOptionPane("Contraseña incorrecta", JOptionPane.ERROR_MESSAGE);
-                                    // Mostrar el cuadro de diálogo
-                                    JDialog dialog = optionPane.createDialog("Error");
-                                    dialog.setResizable(false);
-                                    dialog.setVisible(true);
+                                    System.out.println(tipo);
+                                    System.out.println(passwordUser);
+                                    System.out.println(enteredPassword);
+                                    if (passwordUser.equals(enteredPasswordString) & selectedOption.equals("Administrador")){
+                                        JOptionPane optionPane = new JOptionPane("Usted es Cajero", JOptionPane.ERROR_MESSAGE);
+                                        // Mostrar el cuadro de diálogo
+                                        JDialog dialog = optionPane.createDialog("Error");
+                                        dialog.setResizable(false);
+                                        dialog.setVisible(true);
+                                        usertext.setText("");
+                                        passwordtext.setText("");
+                                    }else if(passwordUser.equals(enteredPasswordString) & selectedOption.equals("Cajero")) {
+                                        JOptionPane optionPane = new JOptionPane("Usted es Administrador", JOptionPane.ERROR_MESSAGE);
+                                        // Mostrar el cuadro de diálogo
+                                        JDialog dialog = optionPane.createDialog("Error");
+                                        dialog.setResizable(false);
+                                        dialog.setVisible(true);
+                                    }else {
+                                        System.out.println("Contraseña incorrecta");
+                                        JOptionPane optionPane = new JOptionPane("Contraseña incorrecta", JOptionPane.ERROR_MESSAGE);
+                                        // Mostrar el cuadro de diálogo
+                                        JDialog dialog = optionPane.createDialog("Error");
+                                        dialog.setResizable(false);
+                                        dialog.setVisible(true);
+                                    }
                                     usertext.setText("");
                                     passwordtext.setText("");
                                 }
