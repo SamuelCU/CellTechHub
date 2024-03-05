@@ -2,6 +2,8 @@ Informe CellTechHub
 
 Nombres: Anderson Vilatuña, Kevin Cola,Samuel Cuti, Estefania Sanchez
 
+Link del manual de Usuario: https://youtu.be/ueJ2ZqhLPps
+
 Objetivos
 
 - Desarrollar una plataforma de software intuitiva y fácil de usar.
