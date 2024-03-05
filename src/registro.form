@@ -127,7 +127,7 @@
         </properties>
         <border type="none"/>
         <children>
-          <component id="e3672" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+          <component id="e3672" class="javax.swing.JTextField" binding="nombretext">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -135,7 +135,7 @@
             </constraints>
             <properties/>
           </component>
-          <component id="1adad" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+          <component id="1adad" class="javax.swing.JTextField" binding="cedulatext">
             <constraints>
               <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -231,7 +231,7 @@
                 </constraints>
                 <properties>
                   <foreground color="-1"/>
-                  <text value="APELLIDO        "/>
+                  <text value="CONFIRMACION NOMBRE"/>
                 </properties>
               </component>
             </children>
@@ -278,7 +278,7 @@
               </component>
             </children>
           </grid>
-          <component id="f00ac" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+          <component id="f00ac" class="javax.swing.JTextField" binding="cnombretext">
             <constraints>
               <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -286,7 +286,7 @@
             </constraints>
             <properties/>
           </component>
-          <component id="ba81d" class="javax.swing.JTextField" binding="textField4" default-binding="true">
+          <component id="ba81d" class="javax.swing.JTextField" binding="dirreciontext">
             <constraints>
               <grid row="5" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -294,7 +294,7 @@
             </constraints>
             <properties/>
           </component>
-          <component id="b5506" class="javax.swing.JTextField" binding="textField5" default-binding="true">
+          <component id="b5506" class="javax.swing.JTextField" binding="telefonotext">
             <constraints>
               <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -302,7 +302,7 @@
             </constraints>
             <properties/>
           </component>
-          <component id="7ecca" class="javax.swing.JTextField" binding="textField6" default-binding="true">
+          <component id="7ecca" class="javax.swing.JTextField" binding="emailtext">
             <constraints>
               <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>

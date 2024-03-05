@@ -1,19 +1,24 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Objects;
 
 public class registro {
     public JPanel registropanel;
     private JRadioButton outButton;
     private JLabel usertext;
     private JRadioButton returnButton;
-    private JTextField textField1;
-    private JTextField textField2;
+    private JTextField nombretext;
+    private JTextField cedulatext;
     private JButton AGREGARButton;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
-    private JTextField textField6;
+    private JTextField cnombretext;
+    private JTextField dirreciontext;
+    private JTextField telefonotext;
+    private JTextField emailtext;
 
     public registro() {
         outButton.addActionListener(new ActionListener() {
@@ -42,6 +47,54 @@ public class registro {
                 frame2.setSize(850,550);
                 frame2.setLocationRelativeTo(null);
                 frame2.setVisible(true);
+            }
+        });
+        AGREGARButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int idn= Integer.parseInt(cedulatext.getText());
+                String nombre = nombretext.getText();
+                String cnombre = cnombretext.getText();
+                String email= emailtext.getText();
+                String telefono= telefonotext.getText();
+                String dir =dirreciontext.getText();
+                if(Objects.equals(nombretext.getText(),cnombretext.getText())
+                ){
+                    try(Connection connection= DriverManager.getConnection("jdbc:mysql://utrknxklzvib6amk:KkyQew23qotJ6GAkmksf@bqjaf6disbf0cayzptja-mysql.services.clever-cloud.com:3306/bqjaf6disbf0cayzptja", "utrknxklzvib6amk", "KkyQew23qotJ6GAkmksf")){
+                        String sql="INSERT INTO cliente(id_cliente,nombre,email,telefono,direccion)values(?,?,?,?,?)";
+                        try(PreparedStatement preparedStatement=connection.prepareStatement(sql)){
+                            preparedStatement.setInt(1,idn);
+                            preparedStatement.setString(2,nombre);
+                            preparedStatement.setString(3,email);
+                            preparedStatement.setString(4,telefono);
+                            preparedStatement.setString(5,dir);
+                            int filasAfectadas=preparedStatement.executeUpdate();
+                            if(filasAfectadas>0){
+                                System.out.println("Insercion exitosa");
+                                nombretext.setText("");
+                                cedulatext.setText("");
+                                cnombretext.setText("");
+                                emailtext.setText("");
+                                telefonotext.setText("");
+                                dirreciontext.setText("");
+                            }else {
+                                System.out.println("No se pudo insertar");
+                            }
+                        }catch (SQLException ex){
+                            ex.printStackTrace();
+                        }
+                    }catch (SQLException ex){
+                        ex.printStackTrace();
+                    }
+                }else {
+                    JOptionPane optionPane = new JOptionPane("No coincioden las credenciales", JOptionPane.ERROR_MESSAGE);
+                    // Mostrar el cuadro de diálogo
+                    JDialog dialog = optionPane.createDialog("Error");
+                    dialog.setResizable(false);
+                    dialog.setVisible(true);
+                    nombretext.setText("");
+                    cnombretext.setText("");
+                }
             }
         });
     }
